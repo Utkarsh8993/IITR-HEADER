@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Indian Institute of Technology Roorkee</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="wrapper">
+    <div class="header">
+        <div class="hamburger-wrapper" onclick="onHamburgurClick()"">
+            <img
+                src="images/Hamburger.svg"
+            />
+        </div>
+        <div class="logo">
+                <img
+                    src="images/iitr logo 4.svg"
+                />
+        </div>
+        <div class="g20Logo">
+            <img
+                src="images/g20-logo.png"
+                style="width: 6.25rem;"
+            />
+        </div>
+    <div class="accessories-wrapper">
+        <div class="side-menu-wrapper">
+        <div class="upper-wrapper">
+                    <div class="side-menu-item">
+                        <div class="font-size">
+                            <img
+                                src="images/text-small.svg"
+                            />
+                            <img
+                                src="images/text-medium.svg"
+                            />
+                            <img
+                                src="images/text-big.svg"
+                            />
+                        </div>
+                        </div>
+                        <div class="side-menu-item">
+                            <div class="theme-changer">
+                                    <div class="light-theme">A</div>
+                                    <div class="dark-theme">A</div>
+                            </div>
+                    </div>
+                    <div class="side-menu-item">
+                        <span class="language">
+                            <a>हिन्दी</a>
+                            |
+                            <a>Eng</a>
+                        </span>
+                    </div>
+                </div>
+                <hr>
+                <div class="lower-wrapper">
+                    <div class="side-menu-item">
+                        <a class="nav-links">WEBMAIL</a>
+                    </div>
+                    <div class="side-menu-item">
+                        <a class="nav-links"><pre>CONTACT US</pre></a>
+                    </div>
+                    <div class="side-menu-item">
+                        <a class="nav-links">DIRECTORY</a>
+                    </div>
+                </div>
+           </div>
+           <div class="search-wrapper">
+            <img
+                src="images/search.svg" />
+        </div>
+        </div>
+
+    </div>
+    <div class="hamburger-navbar-wrapper">
+        <div class="hamburger-item" onclick="onSideMenuClick(0)">
+            <div class="hamburger-text">INSTITUTE</div>
+        </div>
+        <div class="side-menu">
+            <ul>
+                <li class="side-menu-text">About the Institute</li>
+                <li class="side-menu-text">Newsroom</li>
+            </ul>
+        </div>
+        <div class="hamburger-item">
+            <div class="hamburger-text">ADMISSIONS</div>
+        </div>
+        <div class="hamburger-item">
+            <div class="hamburger-text">ADMINSTRATION</div>
+        </div>
+        <div class="hamburger-item">
+            <div class="hamburger-text">ACADEMICS</div>
+        </div>
+        <div class="hamburger-item">
+            <div class="hamburger-text">CAMPUS LIFE</div>
+        </div>
+        <div class="hamburger-item">
+            <div class="hamburger-text">DEPARTMENTS</div>
+        </div>
+        <div class="hamburger-item">
+            <div class="hamburger-text">RESEARCH</div>
+        </div>
+        <div class="hamburger-item">
+            <div class="hamburger-text">CAREERS</div>
+        </div>
+        <div class="hamburger-item">
+            <div class="hamburger-text">PLACEMENTS</div>
+        </div>
+        <div class="hamburger-item">
+            <div class="hamburger-text">RESOURCES</div>
+        </div>
+        <div class="upper-wrapper">
+            <div class="side-menu-item">
+                <div class="theme-changer">
+                        <div class="light-theme">A</div>
+                        <div class="dark-theme">A</div>
+                </div>
+        </div>
+            <div class="side-menu-item">
+                <div class="font-size">
+                    <img
+                        src="images/text-small.svg"
+                    />
+                    <img
+                        src="images/text-medium.svg"
+                    />
+                    <img
+                        src="images/text-big.svg"
+                    />
+                </div>
+                </div>
+                
+            <div class="side-menu-item">
+                <span class="language">
+                    <a>हिन्दी</a>
+                    |
+                    <a>Eng</a>
+                </span>
+            </div>
+        </div>
+        <div class="lower-wrapper">
+            <div class="side-menu-item">
+                <a class="nav-links">CALENDAR</a>
+            </div>
+            <div class="side-menu-item">
+                <a class="nav-links">CONTACT US</a>
+            </div>
+            <div class="side-menu-item">
+                <a class="nav-links">DIRECTORY</a>
+            </div>
+            <div class="side-menu-item">
+                <a class="nav-links">WEBMAIL</a>
+            </div>
+        </div>
+    </div>
+    <div class="navbar-wrapper">
+        <navbar class="navbar">
+        <div class="nav-item-wrapper" onmouseenter="dropdownShow(0)" onmouseleave="onMouseOff(0)">
+            <div class="nav-item">
+                <a class="nav-link">
+                    <div class="container-hover">
+                        <div class="text-cointainer">INSTITUTE</div>
+                        <img
+                            src="images/Dropdown.svg"
+                            class="dropdown-svg"
+                        />
+                    </div>
+                </a>
+            </div>
+            <ul class="dropdown">
+                <li class="dropdown-item" style="padding-top: 0.25rem;">About the Institute</li>
+                <li class="dropdown-item">Newsroom</li>
+            </ul>
+    </div>
+    <div class="nav-item-wrapper" onmouseenter="dropdownShow(1)" onmouseleave="onMouseOff(1)">
+        <div class="nav-item">
+            <a class="nav-link">
+                <div class="container-hover">
+                    <div class="text-cointainer">ADMISSIONS</div>
+                    <img
+                        src="images/Dropdown.svg"
+                        class="dropdown-svg"
+                    />
+                </div>
+                <ul class="dropdown">
+                    <li class="dropdown-item" style="padding-top: 0.25rem;">UG Admissions</li>
+                    <li class="dropdown-item">PG Admissions</li>
+                    <li class="dropdown-item">PHD Admissions</li>
+                </ul> 
+            </a>
+        </div>
+    </div>
+    <div class="nav-item-wrapper" onmouseenter="dropdownShow(2)" onmouseleave="onMouseOff(2)">
+        <div class="nav-item">
+            <a class="nav-link">
+            <div class="container-hover">
+                <div class="text-cointainer">ADMINSTRATION</div>
+                <img
+                    src="images/Dropdown.svg"
+                    class="dropdown-svg"
+                />
+            </div> 
+            </a>
+            <ul class="dropdown">
+                <li class="dropdown-item" style="padding-top: 0.25rem;">Senate</li>
+                <li class="dropdown-item">Student Affairs Council</li>
+                <li class="dropdown-item">Deans Corner</li>
+                <li class="dropdown-item">Institute Central Adminstration</li>
+                <li class="dropdown-item">Organisations</li>
+            </ul>
+        </div>
+    </div>
+    <div class="nav-item-wrapper" onmouseenter="dropdownShow(3)" onmouseleave="onMouseOff(3)">
+        <div class="nav-item">
+            <a class="nav-link">
+                <div class="container-hover">
+                    <div class="text-cointainer">ACADEMICS</div>
+                    <img
+                        src="images/Dropdown.svg"
+                        class="dropdown-svg"
+                    />
+                </div> 
+            </a>
+        </div>
+        <ul class="dropdown">
+            <li class="dropdown-item" style="padding-top: 0.25rem;">Notifications</li>
+            <li class="dropdown-item">Academic Calendar</li>
+            <li class="dropdown-item">Fee Structure</li>
+            <li class="dropdown-item">Academic Programmes</li>
+            <li class="dropdown-item">Downloads</li>
+            <li class="dropdown-item">Academic Login</li>
+        </ul>
+    </div>
+    <div class="nav-item-wrapper" onmouseenter="dropdownShow(4)" onmouseleave="onMouseOff(4)">
+        <div class="nav-item">
+            <a class="nav-link">
+                <div class="container-hover">
+                    <div class="text-cointainer">CAMPUSLIFE</div>
+                    <img
+                        src="images/Dropdown.svg"
+                        class="dropdown-svg"
+                    />
+                </div> 
+            </a>
+        </div>
+        <ul class="dropdown">
+            <li class="dropdown-item" style="padding-top: 0.25rem;">Hostel life</li>
+            <li class="dropdown-item">Student Groups</li>
+            <li class="dropdown-item">Guest House</li>
+            <li class="dropdown-item">Clubs</li>
+            <li class="dropdown-item">Sports</li>
+            <li class="dropdown-item">Facilities</li>
+            <li class="dropdown-item">Fresher's FAQ</li>
+        </ul>
+    </div>
+    <div class="nav-item-wrapper" onmouseenter="dropdownShow(5)" onmouseleave="onMouseOff(5)">
+        <div class="nav-item">
+            <a class="nav-link">
+                <div class="container-hover">
+                    <div class="text-cointainer">DEPARTMENTS</div>
+                    <img
+                        src="images/Dropdown.svg"
+                        class="dropdown-svg"
+                    />
+                </div> 
+            </a>
+        </div>
+        <ul class="dropdown">
+            <li class="dropdown-item" style="padding-top: 0.25rem;">Departments</li>
+            <li class="dropdown-item">Centres</li>
+            <li class="dropdown-item">School</li>
+        </ul>
+    </div>
+    <div class="nav-item-wrapper" onmouseenter="dropdownShow(6)" onmouseleave="onMouseOff(6)">
+        <div class="nav-item">
+            <a class="nav-link">
+                <div class="container-hover">
+                    <div class="text-cointainer">RESEARCH</div>
+                    <img
+                        src="images/Dropdown.svg"
+                        class="dropdown-svg"
+                    /> 
+                </div>
+            </a>
+            <ul class="dropdown">
+            </ul>
+        </div>
+    </div>
+    <div class="nav-item-wrapper" onmouseenter="dropdownShow(7)" onmouseleave="onMouseOff(7)">
+        <div class="nav-item">
+            <a class="nav-link">
+                <div class="container-hover">
+                    <div class="text-cointainer">CAREERS</div>
+                    <img
+                        src="images/Dropdown.svg"
+                        class="dropdown-svg"
+                        />
+                </div> 
+            </a>
+        </div>
+        <ul class="dropdown">
+            <li class="dropdown-item" style="padding-top: 0.25rem;">Intern@IITR(SPARK)</li>
+            <li class="dropdown-item">Faculty positions</li>
+            <li class="dropdown-item">Other Job Openings</li>
+            <li class="dropdown-item">Recruitment Examination</li>
+            <li class="dropdown-item">FAQ's</li>
+        </ul>
+    </div>
+    <div class="nav-item-wrapper" onmouseenter="dropdownShow(8)" onmouseleave="onMouseOff(8)">
+        <div class="nav-item">
+            <a class="nav-link">
+                <div class="container-hover">
+                    <div class="text-cointainer">PLACEMENTS</div>
+                    <img
+                        src="images/Dropdown.svg"
+                        class="dropdown-svg"
+                    />
+                </div> 
+            </a>
+        </div>
+        <ul class="dropdown">
+            <li class="dropdown-item" style="padding-top: 0.25rem;">Procedure</li>
+        </ul>
+    </div>
+    <div class="nav-item-wrapper" onmouseenter="dropdownShow(9)" onmouseleave="onMouseOff(9)">
+        <div class="nav-item">
+            <a class="nav-link">
+                <div class="container-hover">
+                    <div class="text-cointainer">RESOURCES</div>
+                    <img
+                        src="images/Dropdown.svg"
+                        class="dropdown-svg"
+                    />
+                </div> 
+            </a>
+        </div>
+        <ul class="dropdown">
+            <li class="dropdown-item" style="padding-top: 0.25rem;">Library</li>
+            <li class="dropdown-item">For Alumuni</li>
+            <li class="dropdown-item">Healthcare</li>
+            <li class="dropdown-item">Funds Transfer</li>
+            <li class="dropdown-item">Internal Committies</li>
+            <li class="dropdown-item">Services and Support</li>
+            <li class="dropdown-item">Adminstrative</li>
+            <li class="dropdown-item">Miscallenous</li>
+        </ul>
+    </div>
+    </navbar>
+    </div>
+</div>
+
+<script>
+    function dropdownShow(i){
+        console.log(document.getElementsByClassName('dropdown'))
+        document.getElementsByClassName('dropdown')[i].style.display = "flex";
+    }
+    function onMouseOff(i){
+        document.getElementsByClassName('dropdown')[i].style.display = "none";
+    }
+    function onHamburgurClick(){
+        const display = document.getElementsByClassName('hamburger-navbar-wrapper')[0].style.display;
+        console.log(display)
+        if(display === "flex"){
+            document.getElementsByClassName('hamburger-navbar-wrapper')[0].style.display = "none";
+        } else{
+            document.getElementsByClassName('hamburger-navbar-wrapper')[0].style.display = "flex";
+        }
+    }
+    function onSideMenuClick(i){
+        const display = document.getElementsByClassName('side-menu')[i].style.display;
+        console.log(display)
+        if(display === "flex"){
+            document.getElementsByClassName('side-menu')[i].style.display = "none";
+        } else{
+            document.getElementsByClassName('side-menu')[i].style.display = "flex";
+        }
+    }
+</script>
+</body>
+</html>
