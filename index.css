@@ -183,7 +183,7 @@ pre{
     cursor: pointer;
     flex-direction: column;
     min-width: 9rem;
-    position: relative;
+    position: absolute;
     width: max-content;
     gap: 0.5rem;
     justify-content: center;
@@ -242,7 +242,7 @@ pre{
     }
     
 }
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
     .navbar-wrapper{
         display: none;
     }
