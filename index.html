@@ -10,10 +10,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 </head>
-<body>
-<div class="wrapper">
+<body onresize="resize()">
+<div class="wrapper" >
     <div class="header">
-        <div class="hamburger-wrapper" onclick="onHamburgurClick()"">
+        <div class="hamburger-wrapper" onclick="onHamburgurClick()">
             <img
                 src="images/Hamburger.svg"
             />
@@ -26,7 +26,6 @@
         <div class="g20Logo">
             <img
                 src="images/g20-logo.png"
-                style="width: 6.25rem;"
             />
         </div>
     <div class="accessories-wrapper">
@@ -158,7 +157,15 @@
         <div class="ham-side-menu-wrapper">
             <div class="side-menu">
                 <ul class="side-menu-text-wrapper">
-                    <li class="side-menu-text">About the Institute</li>
+                    <div class="side-menu-text" onmouseleave="onSubMenuLeave()">
+                        <div class="subside-menu-heading" onmouseover="onSubMenuClick()"  >About the Institute</div>
+                        <div class="subside-menu">
+                            <div class="subside-menu-item">Institute Time Capsule</div>
+                            <div class="subside-menu-item">IITR By Numbers</div>
+                            <div class="subside-menu-item">Luminaries</div>
+                            <div class="subside-menu-item">Governing Acts</div>
+                        </div>
+                    </div>
                     <li class="side-menu-text">Newsroom</li>
                 </ul>
             </div>
@@ -242,7 +249,7 @@
     </div>
     <div class="navbar-wrapper">
         <navbar class="navbar">
-        <div class="nav-item-wrapper" onmouseenter="dropdownShow(0)" onmouseleave="onMouseOff(0)">
+        <div class="nav-item-wrapper" onmouseenter="dropdownShowSub()" onmouseleave="onMouseOffSub()">
             <div class="nav-item">
                 <a class="nav-link">
                     <div class="container-hover">
@@ -254,12 +261,20 @@
                     </div>
                 </a>
             </div>
-            <ul class="dropdown">
-                <li class="dropdown-item" style="padding-top: 0.25rem;">About the Institute</li>
-                <li class="dropdown-item">Newsroom</li>
+            <ul class="dropdown-sub" onmouseleave="onSideMenuHoverOff()" >
+                <div class="dropdown-submenu-items" style="padding-top: 0.25rem;">
+                    <div class="drop-submenu-heading" onmouseover="onSideMenuHover()" >About the Institute</div>
+                    <div class="drop-submenu-heading">Newsroom</div>
+                </div>
+                <div class="drop-submenu">
+                    <div class="drop-submenu-item">Institute Time Capsule</div>
+                    <div class="drop-submenu-item">IITR By Numbers</div>
+                    <div class="drop-submenu-item">Luminaries</div>
+                    <div class="drop-submenu-item">Governing Acts</div>
+                </div>
             </ul>
     </div>
-    <div class="nav-item-wrapper" onmouseenter="dropdownShow(1)" onmouseleave="onMouseOff(1)">
+    <div class="nav-item-wrapper" onmouseenter="dropdownShow(0)" onmouseleave="onMouseOff(0)">
         <div class="nav-item">
             <a class="nav-link">
                 <div class="container-hover">
@@ -267,7 +282,7 @@
                     <img
                         src="images/Dropdown.svg"
                         class="dropdown-svg"
-                    />
+                    />  
                 </div>
                 <ul class="dropdown">
                     <li class="dropdown-item" style="padding-top: 0.25rem;">UG Admissions</li>
@@ -277,7 +292,7 @@
             </a>
         </div>
     </div>
-    <div class="nav-item-wrapper" onmouseenter="dropdownShow(2)" onmouseleave="onMouseOff(2)">
+    <div class="nav-item-wrapper" onmouseenter="dropdownShow(1)" onmouseleave="onMouseOff(1)">
         <div class="nav-item">
             <a class="nav-link">
             <div class="container-hover">
@@ -297,7 +312,7 @@
             </ul>
         </div>
     </div>
-    <div class="nav-item-wrapper" onmouseenter="dropdownShow(3)" onmouseleave="onMouseOff(3)">
+    <div class="nav-item-wrapper" onmouseenter="dropdownShow(2)" onmouseleave="onMouseOff(2)">
         <div class="nav-item">
             <a class="nav-link">
                 <div class="container-hover">
@@ -318,7 +333,7 @@
             <li class="dropdown-item">Academic Login</li>
         </ul>
     </div>
-    <div class="nav-item-wrapper" onmouseenter="dropdownShow(4)" onmouseleave="onMouseOff(4)">
+    <div class="nav-item-wrapper" onmouseenter="dropdownShow(3)" onmouseleave="onMouseOff(3)">
         <div class="nav-item">
             <a class="nav-link">
                 <div class="container-hover">
@@ -340,7 +355,7 @@
             <li class="dropdown-item">Fresher's FAQ</li>
         </ul>
     </div>
-    <div class="nav-item-wrapper" onmouseenter="dropdownShow(5)" onmouseleave="onMouseOff(5)">
+    <div class="nav-item-wrapper" onmouseenter="dropdownShow(4)" onmouseleave="onMouseOff(4)">
         <div class="nav-item">
             <a class="nav-link">
                 <div class="container-hover">
@@ -358,7 +373,7 @@
             <li class="dropdown-item">School</li>
         </ul>
     </div>
-    <div class="nav-item-wrapper" onmouseenter="dropdownShow(6)" onmouseleave="onMouseOff(6)">
+    <div class="nav-item-wrapper" onmouseenter="dropdownShow(5)" onmouseleave="onMouseOff(5)">
         <div class="nav-item">
             <a class="nav-link">
                 <div class="container-hover">
@@ -369,11 +384,11 @@
                     /> 
                 </div>
             </a>
-            <ul class="dropdown">
+            <ul class="dropdown" style="display: none;">
             </ul>
         </div>
     </div>
-    <div class="nav-item-wrapper" onmouseenter="dropdownShow(7)" onmouseleave="onMouseOff(7)">
+    <div class="nav-item-wrapper" onmouseenter="dropdownShow(6)" onmouseleave="onMouseOff(6)">
         <div class="nav-item">
             <a class="nav-link">
                 <div class="container-hover">
@@ -393,7 +408,7 @@
             <li class="dropdown-item">FAQ's</li>
         </ul>
     </div>
-    <div class="nav-item-wrapper" onmouseenter="dropdownShow(8)" onmouseleave="onMouseOff(8)">
+    <div class="nav-item-wrapper" onmouseenter="dropdownShow(7)" onmouseleave="onMouseOff(7)">
         <div class="nav-item">
             <a class="nav-link">
                 <div class="container-hover">
@@ -409,7 +424,7 @@
             <li class="dropdown-item" style="padding-top: 0.25rem;">Procedure</li>
         </ul>
     </div>
-    <div class="nav-item-wrapper" onmouseenter="dropdownShow(9)" onmouseleave="onMouseOff(9)">
+    <div class="nav-item-wrapper" onmouseenter="dropdownShow(8)" onmouseleave="onMouseOff(8)">
         <div class="nav-item">
             <a class="nav-link">
                 <div class="container-hover">
@@ -437,16 +452,40 @@
 </div>
 
 <script>
+
+    const resize = () => {
+        if(window.innerWidth > 1100){
+            document.getElementsByClassName('hamburger-item-wrapper')[0].style.display = "none";
+        }
+            
+}
+    const onSubMenuLeave = () =>{
+        const subMenu = document.getElementsByClassName('subside-menu')[0].style;
+        subMenu.display = "none";
+        document.getElementsByClassName('subside-menu-heading')[0].style.paddingLeft = "0rem";
+        document.getElementsByClassName('subside-menu-heading')[0].style.borderLeft = "0px solid #0067b3";
+      
+    }
+    
     function dropdownShow(i){
-        console.log(document.getElementsByClassName('dropdown'))
         document.getElementsByClassName('dropdown')[i].style.display = "flex";
+    }
+    function dropdownShowSub(){
+        document.getElementsByClassName('dropdown-sub')[0].style.display = "flex";
+
+        
     }
     function onMouseOff(i){
         document.getElementsByClassName('dropdown')[i].style.display = "none";
+        
+    }
+    function onMouseOffSub(){
+        document.getElementsByClassName('dropdown-sub')[0].style.display = "none";
+        document.getElementsByClassName('drop-submenu')[0].style.display = "none";
+        document.getElementsByClassName('dropdown-sub')[0].style.marginLeft = "0rem";
     }
     function onHamburgurClick(){
         const display = document.getElementsByClassName('hamburger-item-wrapper')[0].style.display;
-        console.log(display)
         if(display === "flex"){
             document.getElementsByClassName('hamburger-item-wrapper')[0].style.display = "none";
             const arr = document.getElementsByClassName('side-menu');
@@ -491,6 +530,23 @@
             })
             hamItems[i].style.backgroundColor="#f0f1f6";
         }
+
+    }
+
+    const onSubMenuClick = () =>{
+        const subMenu = document.getElementsByClassName('subside-menu')[0].style;
+        subMenu.display = "flex";
+        document.getElementsByClassName('subside-menu-heading')[0].style.paddingLeft = "0.2rem";
+        document.getElementsByClassName('subside-menu-heading')[0].style.borderLeft = "4px solid #0067b3";
+    }
+
+    const onSideMenuHover = () => {
+        document.getElementsByClassName('drop-submenu')[0].style.display = "flex";
+        document.getElementsByClassName('dropdown-sub')[0].style.marginLeft = "1rem";
+    }
+    const onSideMenuHoverOff = () => {
+        document.getElementsByClassName('drop-submenu')[0].style.display = "none";
+        document.getElementsByClassName('dropdown-sub')[0].style.marginLeft = "0rem";
     }
 </script>
 </body>
